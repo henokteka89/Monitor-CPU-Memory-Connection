@@ -1,0 +1,5 @@
+select hostname, count(*) 
+from sys.sysprocesses with (nolock)
+where hostname like ''
+group by hostname 
+order by count(*)
